@@ -1,0 +1,27 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double salario=0.0, novoSalario=0.0, reajusteGanho=0.0, reajustePercentual=0.0;
+		
+		salario = sc.nextDouble();
+		
+		if(salario>0.0 && salario<=400.0) {
+			reajustePercentual = 0.15;
+			reajusteGanho = salario * reajustePercentual;
+			novoSalario = salario + reajusteGanho;
+		}
+			
+		System.out.printf("Novo salario: %.2f%n", novoSalario);
+		System.out.printf("Novo reajuste ganho: %.2f%n", reajusteGanho);
+		System.out.printf("Em percentual: %.2f%n", reajustePercentual);
+		
+		sc.close();
+	}
+
+}

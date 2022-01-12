@@ -1,0 +1,40 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double salario; 
+		double baseCalculo8, imposto8;
+		double baseCalculo18, imposto18;
+		double baseCalculo28, imposto28;
+		
+		
+		salario = sc.nextDouble();
+
+		if(salario <= 2000.0)
+			System.out.println("Isento");
+		else if(salario<=3000.0) {
+			
+		}
+		
+		baseCalculo = 2000;
+		imposto = 0.0;
+		
+			
+		
+		imposto = 0.0;
+		baseCalculo = salario - 2000.0
+		imposto += baseCalculo * 0.08;
+		imposto += baseCalculo * 0.18;
+		imposto += baseCalculo * 0.28;		
+		
+		System.out.printf("R$ %.2f%n", imposto);
+		
+		sc.close();
+	}
+
+}

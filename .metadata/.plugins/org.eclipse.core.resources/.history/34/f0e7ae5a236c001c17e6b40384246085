@@ -1,0 +1,38 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double A,B,C, aux;
+		
+		A = sc.nextDouble();
+		B = sc.nextDouble();
+		C = sc.nextDouble();
+		
+		if(A<B) {
+			aux=A;
+			A=B;
+			B=aux;
+		}
+		if(A<C) {
+			aux=A;
+			A=C;
+			C=aux;
+		}
+		if(B<C) {
+			aux=B;
+			B=C;
+			C=aux;
+		}
+	
+		if(A>=B+C)
+			System.out.println("NAO FORMA TRIANGULO");
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,38 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double salario; 
+		double imposto8;
+		double imposto18;
+		double imposto28;		
+		
+		salario = sc.nextDouble();
+
+		if(salario <= 2000.0)
+			System.out.println("Isento");
+		else if(salario<=3000.0) {
+			imposto8 = (salario-2000.0) * 0.08;
+		}
+		else if(salario<=4500.0) {
+			imposto8 = (salario-2000.0) * 0.08;
+			imposto18 = (salario-3000.0) * 0.18;
+		}
+		else {
+			imposto8 = (salario-2000.0) * 0.08;
+			imposto18 = (salario-3000.0) * 0.18;
+			imposto28 = (salario-4500.0) * 0.28;
+		}
+		
+		
+		System.out.printf("R$ %.2f%n", imposto);
+		
+		sc.close();
+	}
+
+}
